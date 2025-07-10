@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYDRO FLOW SERVICE - Revolutionizing Property Care Since 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --hydro-blue: #0A558C;
+            --coral: #FF6B35;
+            --green: #5CAB7D;
+            --gold: #F5B82E;
+            --sand: #F4EED7;
+            --ocean: #0A2E5A;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--sand);
+            color: #333;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .hero-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        
+        .counter-badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .chapter::before {
+            content: attr(data-year);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--hydro-blue);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .value-meter {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+            overflow: hidden;
+        }
+        
+        .value-meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            transition: width 1s ease-in-out;
+        }
+        
+        .testimonial-slide {
+            transition: all 0.5s ease;
+        }
+        
+        .founder-card {
+            perspective: 1000px;
+        }
+        
+        .founder-card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .founder-card:hover .founder-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .founder-card-front, .founder-card-back {
+            backface-visibility: hidden;
+        }
+        
+        .founder-card-back {
+            transform: rotateY(180deg);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-video {
+                height: 70vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .journey-chapter {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-12" src="https://via.placeholder.com/150x50?text=Hydro+Flow" alt="Hydro Flow Service">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#story" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Our Story</a>
+                        <a href="#services" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#results" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Results</a>
+                        <a href="#contact" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <a href="tel:+15551234567" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center">
+                            <i class="fas fa-phone mr-2"></i> Call Us
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#story" class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Our Story</a>
+                <a href="#services" class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#results" class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Results</a>
+                <a href="#contact" class="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="tel:+15551234567" class="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-video relative">
+        <!-- Video background placeholder - would be replaced with actual drone footage -->
+        <video autoplay muted loop class="w-full h-full object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-driving-on-a-coastal-road-3153-large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <div class="text-center px-4">
+                <div class="counter-badge bg-blue-600 text-white inline-block px-6 py-3 rounded-full mb-6">
+                    <span class="count text-3xl font-bold">178</span>
+                    <p class="text-sm">Properties Transformed Since 2024</p>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Two Guys. One Truck. Unlimited Passion.</h1>
+                <p class="text-xl text-white mb-8 max-w-3xl mx-auto">Nate & Danny started with a dream and a pressure washer. Now we're transforming Treasure Coast properties one driveway at a time.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        Get Your Free Quote
+                    </a>
+                    <a href="#story" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        Our Story
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Story Section -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900">From One Truck to Treasure Coast's Most Trusted</h2>
+            
+            <div class="journey-chapter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Chapter 1 -->
+                <div class="chapter relative bg-sand-100 rounded-lg p-6 shadow-md text-center" data-year="2024">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Nate & Danny with first truck" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">The Beginning: One Truck Dream</h3>
+                    <p class="text-gray-700">"We pressure washed Mrs. Johnson's driveway for $75 - still our proudest job!"</p>
+                </div>
+                
+                <!-- Chapter 2 -->
+                <div class="chapter relative bg-sand-100 rounded-lg p-6 shadow-md text-center" data-year="2024">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=770&q=80" alt="Team celebration" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">50 Properties: Community Embraced Us</h3>
+                    <p class="text-gray-700">"Treasure Coast homeowners trusted two 20-year-olds - we delivered!"</p>
+                </div>
+                
+                <!-- Chapter 3 -->
+                <div class="chapter relative bg-sand-100 rounded-lg p-6 shadow-md text-center" data-year="2025">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Upgraded gear" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-900">Investing in Excellence</h3>
+                    <p class="text-gray-700">"Profits reinvested in pro-grade equipment for better results"</p>
+                </div>
+                
+                <!-- Future Chapter -->
+                <div class="future relative bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg p-6 shadow-xl text-center flex flex-col justify-center">
+                    <div class="interactive-frame text-white">
+                        <h3 class="text-2xl font-bold mb-4">Your Property's Transformation Story</h3>
+                        <p class="mb-6">Be part of our journey and let us transform your property</p>
+                        <button class="ar-preview bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 transform hover:scale-105">
+                            Preview Your Home Shine
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Calculator Section -->
+    <section id="services" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900">See Your Property's Potential</h2>
+            
+            <div class="value-generator bg-white rounded-xl shadow-xl p-8 max-w-4xl mx-auto">
+                <div class="calculator grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label for="property-type" class="block text-sm font-medium text-gray-700 mb-1">Property Type</label>
+                        <select id="property-type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option>Driveway</option>
+                            <option>Home Exterior</option>
+                            <option>Deck/Patio</option>
+                            <option>Roof</option>
+                            <option>Pool Area</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="property-size" class="block text-sm font-medium text-gray-700 mb-1">Approximate Size (sq ft)</label>
+                        <input type="text" id="property-size" placeholder="Enter approximate square footage" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+                
+                <button class="calculate w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105 mb-8">
+                    See Transformation Value
+                </button>
+                
+                <div class="result hidden bg-blue-50 p-6 rounded-lg">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="value-boost">
+                            <span class="increase text-3xl font-bold text-green-600">+$3,200</span>
+                            <p class="text-gray-700">Potential Value Increase</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-gray-600">Estimated Cleaning Cost:</p>
+                            <p class="text-2xl font-bold text-blue-900">$275 - $425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="visual-meter mb-4">
+                        <div class="value-meter">
+                            <div class="value-meter-fill" style="width: 72%"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 text-center">Based on similar properties in your area. Actual results may vary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-blue-900">Our Signature Services</h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Professional cleaning solutions that protect your investment and enhance your property's value</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Pressure Washing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-spray-can text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900">Professional Pressure Washing</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Restore your property's curb appeal with our industrial-grade pressure washing that removes years of dirt, grime, and stains.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Driveways & Walkways</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Siding & Exteriors</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Fences & Decks</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-orange-500 font-semibold inline-flex items-center">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Roof Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-home text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900">Soft Wash Roof Cleaning</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Safely remove black streaks, algae, and moss without damaging your roof. Extend its lifespan and improve energy efficiency.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Asphalt Shingles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Tile Roofs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Metal Roofs</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-orange-500 font-semibold inline-flex items-center">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Concrete Cleaning" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-border-style text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-900">Concrete Restoration</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Bring new life to your concrete surfaces with our deep cleaning and sealing services that protect against future stains and wear.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Patios & Pool Decks</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Parking Lots</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Commercial Properties</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-orange-500 font-semibold inline-flex items-center">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="results" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Treasure Coast Homeowners Love Us</h2>
+            <p class="text-xl text-center text-blue-200 mb-16 max-w-3xl mx-auto">Don't just take our word for it - hear what your neighbors are saying</p>
+            
+            <div class="testimonial-carousel relative">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide bg-blue-800 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah R." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Sarah R.</h4>
+                                <p class="text-sm text-blue-300">Hutchinson Island</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg italic mb-6">"These 20-year-olds saved my 30-year-old driveway! I can't believe the transformation - it looks brand new again."</blockquote>
+                        <div class="flex justify-between items-center">
+                            <div class="geo-badge bg-blue-700 text-blue-100 text-xs px-3 py-1 rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i> 3 miles from you
+                            </div>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide bg-blue-800 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Michael T.</h4>
+                                <p class="text-sm text-blue-300">Port St. Lucie</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg italic mb-6">"I was skeptical hiring such young guys, but their attention to detail blew me away. My roof looks 10 years younger!"</blockquote>
+                        <div class="flex justify-between items-center">
+                            <div class="geo-badge bg-blue-700 text-blue-100 text-xs px-3 py-1 rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i> 5 miles from you
+                            </div>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide bg-blue-800 rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="h-12 w-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lisa M." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Lisa M.</h4>
+                                <p class="text-sm text-blue-300">Vero Beach</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-lg italic mb-6">"Nate and Danny treated my home like it was their own. The before/after difference is incredible - worth every penny!"</blockquote>
+                        <div class="flex justify-between items-center">
+                            <div class="geo-badge bg-blue-700 text-blue-100 text-xs px-3 py-1 rounded-full">
+                                <i class="fas fa-map-marker-alt mr-1"></i> 7 miles from you
+                            </div>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-block transition duration-300 transform hover:scale-105">
+                    Join Our Happy Customers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Promise Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="handwritten-guarantee bg-blue-50 rounded-xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-6 text-blue-900">Our Personal Promise to You</h2>
+                        <p class="text-lg text-gray-700 mb-6">We're not some faceless corporation. When you hire Hydro Flow Service, you get Nate and Danny - the actual owners - on your property, ensuring every detail meets our high standards.</p>
+                        
+                        <div class="signature-block mt-8">
+                            <img src="https://via.placeholder.com/300x100?text=Nate+%26+Danny+Signatures" alt="Nate & Danny signatures" class="mb-4">
+                            <p class="text-gray-700 font-medium">We personally oversee every project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <!-- Video placeholder - would be replaced with actual founder video -->
+                        <div class="bg-gray-200 h-full flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <i class="fas fa-play-circle text-6xl text-orange-500 mb-4"></i>
+                                <p class="text-lg font-semibold">Watch Our Personal Promise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Gallery -->
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-blue-900">Real Transformations</h2>
+            <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">See the dramatic difference our work makes on Treasure Coast properties</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Before cleaning" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1600566752227-8f5e9a0b5b3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="After cleaning" class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <p class="text-white font-semibold">Driveway Restoration</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Port St. Lucie Home</h3>
+                        <p class="text-gray-700">15-year-old driveway restored to like-new condition</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Before cleaning" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bf29f9bb21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="After cleaning" class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <p class="text-white font-semibold">Roof Cleaning</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Vero Beach Residence</h3>
+                        <p class="text-gray-700">Algae and black streaks completely removed</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="before-after-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566752371-7ec13b927c86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Before cleaning" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="After cleaning" class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <p class="text-white font-semibold">Pool Deck Restoration</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-blue-900">Fort Pierce Home</h3>
+                        <p class="text-gray-700">Slippery, stained concrete transformed to safe and beautiful</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Property?</h2>
+                    <p class="text-xl mb-8">Get your free, no-obligation quote today. Nate or Danny will personally respond within 24 hours.</p>
+                    
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4">Why Choose Hydro Flow Service?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 text-xl mr-3 mt-1"></i>
+                                <span>Locally owned & operated by Nate & Danny</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 text-xl mr-3 mt-1"></i>
+                                <span>Fully insured and certified professionals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 text-xl mr-3 mt-1"></i>
+                                <span>Environmentally friendly cleaning solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 text-xl mr-3 mt-1"></i>
+                                <span>100% satisfaction guarantee</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-800 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-truck-moving text-orange-500 mr-3"></i>
+                            Truck Tracker
+                        </h3>
+                        <p class="mb-4">See where our truck is right now and when we'll be in your neighborhood.</p>
+                        <div class="flex items-center">
+                            <div class="h-3 w-3 rounded-full bg-green-500 mr-2 animate-pulse"></div>
+                            <p>Currently serving: <span class="font-semibold">Hutchinson Island</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-900">Get Your Free Quote</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <option>Pressure Washing</option>
+                                <option>Roof Cleaning</option>
+                                <option>Concrete Restoration</option>
+                                <option>Deck Cleaning</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell Us About Your Project</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                            Request Free Quote
+                        </button>
+                    </form>
+                    
+                    <div class="mt-8 flex items-center justify-center">
+                        <div class="border-t border-gray-300 flex-grow"></div>
+                        <span class="px-4 text-gray-500">OR</span>
+                        <div class="border-t border-gray-300 flex-grow"></div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="mb-4 text-gray-700">Prefer to talk to Nate or Danny directly?</p>
+                        <a href="tel:+15551234567" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">
+                            <i class="fas fa-phone mr-2"></i> Call Now: (555) 123-4567
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Cards Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900">Meet the Founders</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Nate's Card -->
+                <div class="founder-card">
+                    <div class="founder-card-inner relative">
+                        <div class="founder-card-front bg-blue-50 rounded-xl shadow-xl overflow-hidden">
+                            <div class="h-64 bg-blue-200 flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Nate" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold mb-2 text-blue-900">Nate Thompson</h3>
+                                <p class="text-orange-500 font-semibold mb-4">Co-Founder & Operations</p>
+                                <p class="text-gray-700 mb-4">"I take pride in every detail of our work. Your property deserves the same care I'd give my own home."</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="founder-card-back absolute inset-0 bg-blue-900 text-white p-8 rounded-xl flex flex-col justify-center">
+                            <h4 class="text-xl font-bold mb-4">Nate's Expertise</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>Certified Pressure Washing Technician</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>5 years of professional experience</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>Treasure Coast native</span>
+                                </li>
+                            </ul>
+                            <button class="text-orange-400 font-semibold inline-flex items-center self-start">
+                                Flip Back <i class="fas fa-undo ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Danny's Card -->
+                <div class="founder-card">
+                    <div class="founder-card-inner relative">
+                        <div class="founder-card-front bg-blue-50 rounded-xl shadow-xl overflow-hidden">
+                            <div class="h-64 bg-blue-200 flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Danny" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold mb-2 text-blue-900">Danny Rodriguez</h3>
+                                <p class="text-orange-500 font-semibold mb-4">Co-Founder & Customer Experience</p>
+                                <p class="text-gray-700 mb-4">"Building relationships with our clients is what makes this business special. Your satisfaction is my top priority."</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                                        <i class="fab fa-instagram text-xl"></i>
+                                    </a>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="founder-card-back absolute inset-0 bg-blue-900 text-white p-8 rounded-xl flex flex-col justify-center">
+                            <h4 class="text-xl font-bold mb-4">Danny's Expertise</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>IICRC Certified in Cleaning & Restoration</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>Specialist in eco-friendly cleaning solutions</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>
+                                    <span>Born and raised in Fort Pierce</span>
+                                </li>
+                            </ul>
+                            <button class="text-orange-400 font-semibold inline-flex items-center self-start">
+                                Flip Back <i class="fas fa-undo ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-900">Frequently Asked Questions</h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-blue-900">How much does pressure washing cost?</h3>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-700">Our pricing depends on the size of the area, the type of surface, and the level of cleaning required. Most residential driveway cleanings range from $200-$500, while home exteriors typically cost $300-$800. We provide free, no-obligation quotes so you'll know exactly what to expect.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-blue-900">Is pressure washing safe for my roof/siding/driveway?</h3>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-700">Yes, when done correctly by professionals like our team. We use specialized techniques and equipment tailored to each surface. For roofs, we use a soft wash method that cleans without damaging shingles. For wood surfaces, we adjust pressure to prevent splintering. Your property's safety is our top priority.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-blue-900">How often should I have my property pressure washed?</h3>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-700">We recommend annual cleaning for most properties in the Treasure Coast area. However, it depends on several factors:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Driveways: Every 1-2 years</li>
+                                <li>Home Exteriors: Every 1-3 years</li>
+                                <li>Roofs: Every 2-3 years</li>
+                                <li>Decks & Patios: Annually</li>
+                            </ul>
+                            Properties near water or with lots of trees may need more frequent cleaning.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-blue-900">Do you use environmentally friendly cleaning solutions?</h3>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-700">Absolutely! We're committed to protecting Florida's beautiful environment. Our cleaning solutions are biodegradable, EPA-approved, and safe for plants, pets, and waterways. We never use harsh chemicals that could harm your landscaping or the local ecosystem.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-blue-900">What areas do you serve?</h3>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-700">We proudly serve the entire Treasure Coast area, including:
+                            <ul class="list-disc pl-5 mt-2 space-y-1">
+                                <li>Port St. Lucie</li>
+                                <li>Fort Pierce</li>
+                                <li>Vero Beach</li>
+                                <li>Hutchinson Island</li>
+                                <li>Jensen Beach</li>
+                                <li>Stuart</li>
+                            </ul>
+                            If you're not sure if we service your area, just give us a call at (555) 123-4567.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="community-footer bg-blue-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="founder-signoff">
+                    <div class="h-64 overflow-hidden rounded-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1605348536960-2402f358abda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Nate & Danny with truck" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-xl italic">"Still just two guys and a truck - but now with 178 happy neighbors!"</p>
+                </div>
+                
+                <div class="service-heatmap">
+                    <h3 class="text-2xl font-bold mb-6">Currently Serving</h3>
+                    <div class="map-container bg-blue-800 rounded-xl h-48 mb-6 relative">
+                        <!-- Map placeholder - would be replaced with interactive map -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-map-marked-alt text-4xl text-blue-300"></i>
+                        </div>
+                        <div class="you-are-here absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
+                    </div>
+                    <ul class="cities grid grid-cols-2 gap-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                            Port St. Lucie
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                            Fort Pierce
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                            Vero Beach
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                            Hutchinson Island
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-semibold">Call Us</p>
+                                <a href="tel:+15551234567" class="hover:text-orange-300">(555) 123-4567</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-semibold">Email Us</p>
+                                <a href="mailto:hello@hydroflowservice.com" class="hover:text-orange-300">hello@hydroflowservice.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-orange-500 mt-1 mr-3"></i>
+                            <div>
+                                <p class="font-semibold">Hours</p>
+                                <p>Monday - Friday: 7am - 5pm</p>
+                                <p>Saturday: 8am - 2pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-3">Follow Our Journey</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-yelp"></i>
+                            </a>
+                            <a href="#" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="legal-links flex space-x-6 mb-4 md:mb-0">
+                        <a href="/privacy" class="hover:text-orange-300 text-sm">Privacy Policy</a>
+                        <a href="/terms" class="hover:text-orange-300 text-sm">Terms of Service</a>
+                        <a href="/accessibility" class="hover:text-orange-300 text-sm">Accessibility Statement</a>
+                    </div>
+                    
+                    <div class="certifications flex space-x-4">
+                        <img src="https://via.placeholder.com/80x40?text=Insured" alt="Insured" class="h-8">
+                        <img src="https://via.placeholder.com/80x40?text=IICRC" alt="IICRC Certified" class="h-8">
+                    </div>
+                </div>
+                
+                <div class="copyright text-center md:text-left mt-6 text-sm text-blue-300">
+                    © 2024 Hydro Flow Service. Locally owned by Nate & Danny. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 md:hidden z-50">
+        <a href="tel:+15551234567" class="bg-orange-500 hover:bg-orange-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl animate-bounce">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Value calculator
+        document.querySelector('.calculate').addEventListener('click', function() {
+            const propertyType = document.getElementById('property-type').value;
+            const size = document.getElementById('property-size').value;
+            
+            if (size) {
+                // Simple calculation for demo purposes
+                let valueIncrease, width;
+                
+                if (propertyType === 'Driveway') {
+                    valueIncrease = '+$' + Math.round(size * 0.75);
+                    width = '72%';
+                } else if (propertyType === 'Home Exterior') {
+                    valueIncrease = '+$' + Math.round(size * 1.2);
+                    width = '85%';
+                } else if (propertyType === 'Deck/Patio') {
+                    valueIncrease = '+$' + Math.round(size * 0.9);
+                    width = '68%';
+                } else {
+                    valueIncrease = '+$' + Math.round(size * 0.6);
+                    width = '50%';
+                }
+                
+                document.querySelector('.increase').textContent = valueIncrease;
+                document.querySelector('.value-meter-fill').style.width = width;
+                document.querySelector('.result').classList.remove('hidden');
+                
+                // Scroll to results
+                document.querySelector('.result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                alert('Please enter your approximate square footage');
+            }
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Founder card flip
+        document.querySelectorAll('.founder-card').forEach(card => {
+            const inner = card.querySelector('.founder-card-inner');
+            const flipBackBtn = card.querySelector('.founder-card-back button');
+            
+            card.addEventListener('mouseenter', () => {
+                inner.style.transform = 'rotateY(180deg)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                inner.style.transform = 'rotateY(0deg)';
+            });
+            
+            flipBackBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                inner.style.transform = 'rotateY(0deg)';
+            });
+        });
+
+        // Counter animation
+        function animateCounter() {
+            const counter = document.querySelector('.count');
+            let count = 0;
+            const target = 178;
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // Roughly 60fps
+            
+            const updateCount = () => {
+                count += increment;
+                if (count < target) {
+                    counter.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCount();
+        }
+        
+        // Start counter when hero section is in view
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounter();
+                observer.unobserve(entries[0].target);
+            }
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.hero-video'));
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to your server
+            console.log('Form submitted:', { name, email, phone, service, message });
+            
+            // Show success message
+            alert(`Thanks for your inquiry, ${name}! Nate or Danny will contact you within 24 hours.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=dannyLeam/hydroflowservice-net" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
